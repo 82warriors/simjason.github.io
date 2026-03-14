@@ -7,18 +7,18 @@ st.title("Jason Sim")
 st.subheader("Digital Systems Builder | Educator")
 
 st.write("""
-Welcome to my personal site.
+Welcome to my personal website.
 
-I build digital systems that simplify work, automate processes,
-and transform data into meaningful insights.
+I build digital systems that simplify work,
+automate processes, and transform data into insights.
 """)
 
-st.header("What You Will Find Here")
+st.header("Explore")
 
 st.write("""
-• Learn more about who I am  
-• Explore the systems and projects I have built  
-• Understand the beliefs that guide my work
-""")
+Use the sidebar to learn more about:
 
-st.info("Use the sidebar to navigate the site.")
+• About Me  
+• Projects  
+• Beliefs
+""")
