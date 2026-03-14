@@ -1,1 +1,20 @@
+import streamlit as st
 
+st.title("About Me")
+
+st.write("""
+I work at the intersection of education and technology,
+designing digital systems that improve efficiency and simplify workflows.
+
+My work focuses on automation, data analytics,
+and ICT infrastructure within organisations.
+""")
+
+st.header("Areas of Interest")
+
+st.write("""
+• Automation of workflows  
+• Data dashboards  
+• ICT systems in education  
+• Digital transformation
+""")
