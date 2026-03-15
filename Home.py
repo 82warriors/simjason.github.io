@@ -74,3 +74,80 @@ Centralised portal for ICT services.
 st.divider()
 
 st.markdown("© Jason Sim")
+
+st.divider()
+
+st.header("Featured Projects")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+### ⚙️ Equipment Booking System
+
+Automated equipment booking workflow
+with approval notifications.
+
+**Impact**
+- Reduced manual coordination
+- Faster approvals
+""")
+
+with col2:
+    st.markdown("""
+### 📦 Inventory Management System
+
+Digital asset tracking system with
+analytics dashboards.
+
+**Impact**
+- Centralised equipment tracking
+- Real-time reporting
+""")
+
+with col3:
+    st.markdown("""
+### 🌐 ICT Staff Portal
+
+One-stop portal for ICT services
+and staff requests.
+
+**Impact**
+- Simplified ICT processes
+- Improved staff access
+""")
+
+st.divider()
+
+st.header("Tech Portfolio")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Automation Systems", "10+")
+
+with col2:
+    st.metric("Dashboards Built", "15+")
+
+with col3:
+    st.metric("ICT Solutions", "20+")
+
+
+st.divider()
+
+st.header("Technology Stack")
+
+st.write("""
+Python • Streamlit • Google Apps Script  
+Data Analytics • Workflow Automation  
+Excel Systems • ICT Infrastructure
+""")
+
+st.divider()
+
+st.markdown("""
+### Connect
+
+GitHub: https://github.com/simjason  
+Website: https://simjason.com
+""")
