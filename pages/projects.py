@@ -14,7 +14,6 @@ Google Forms, Sheets and Apps Script.
 st.subheader("ICT Inventory Microsite")
 
 st.image("images/inventory_1.png")
-st.image("images/inventory_2.png")
 
 st.write("""
 Web-based inventory platform centralising ICT asset
@@ -23,7 +22,7 @@ information and operational reporting.
 
 st.subheader("Operational Dashboards")
 
-st.image("images/inventory.png")
+st.image("images/inventory_2.png")
 
 st.write("""
 Built dashboards analysing ICT resource usage
