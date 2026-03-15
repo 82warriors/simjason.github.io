@@ -1,21 +1,20 @@
 import streamlit as st
 
-st.title("Who Am I")
+st.title("About Me")
 
 st.write("""
-I am a technology advocate focused on automation systems,
-data analytics, and digital transformation in education.
+Technology advocate specialising in automation systems,
+data analytics and website platforms.
 
-My work centres on building practical digital solutions
-that streamline operations and empower organisations
-to make better decisions using data.
+My work focuses on building digital systems that streamline
+operations and enable data-driven decision making.
 """)
 
 st.header("Key Expertise")
 
 st.write("""
-• Automation Systems  
-• ICT Infrastructure  
-• Data Dashboards  
-• Digital Platforms
+• Website management and CMS platforms  
+• Data analytics and dashboard development  
+• Automation systems using Google Apps Script  
+• Digital platform development
 """)
