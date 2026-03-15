@@ -48,36 +48,55 @@ st.markdown("""
     color:#6b7280;
 }
 
-.section-title {
+.explore-title{
     text-align:center;
     font-size:36px;
     font-weight:700;
+    margin-top:40px;
+    margin-bottom:30px;
 }
 
-.nav-tile {
-    text-align:center;
+.tile{
     padding:40px;
     border-radius:18px;
     background:#f8fafc;
-    transition:0.25s;
+    transition:all 0.25s ease;
+    height:180px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
-.nav-tile:hover {
+.tile:hover{
     transform:translateY(-6px);
-    box-shadow:0px 12px 30px rgba(0,0,0,0.15);
+    box-shadow:0px 15px 35px rgba(0,0,0,0.15);
 }
 
-.nav-title {
+.tile-title{
     font-size:26px;
     font-weight:600;
 }
 
-.nav-desc {
+.tile-desc{
     color:#6b7280;
+    font-size:16px;
+}
+
+.tile-arrow{
+    font-size:20px;
+    font-weight:600;
+    color:#6366f1;
+    align-self:flex-end;
+    transition:0.2s;
+}
+
+.tile:hover .tile-arrow{
+    transform:translateX(6px);
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 # ---------- HERO ----------
 st.markdown("""
@@ -98,9 +117,10 @@ Building data-driven digital systems that transform workflows and insights.
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<br><br>", unsafe_allow_html=True)
 
 # ---------- METRICS ----------
+st.markdown("<br>", unsafe_allow_html=True)
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -127,56 +147,69 @@ with col3:
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<br>", unsafe_allow_html=True)
 
-# ---------- NAVIGATION ----------
-st.markdown('<div class="section-title">Explore</div>', unsafe_allow_html=True)
+# ---------- EXPLORE ----------
+st.markdown('<div class="explore-title">Explore</div>', unsafe_allow_html=True)
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
 
 with col1:
     st.markdown("""
-<div class="nav-tile">
-<div class="nav-title">👤 About</div>
-<div class="nav-desc">
-Who I am and what I do
+<div class="tile">
+<div>
+<div class="tile-title">👤 About</div>
+<div class="tile-desc">
+Learn about my background, experience and technology journey.
 </div>
+</div>
+<div class="tile-arrow">→</div>
 </div>
 """, unsafe_allow_html=True)
-    st.page_link("pages/AboutMe.py", label="Explore")
+    st.page_link("pages/AboutMe.py", label="")
 
 with col2:
     st.markdown("""
-<div class="nav-tile">
-<div class="nav-title">⚙️ Projects</div>
-<div class="nav-desc">
-Systems and platforms I built
+<div class="tile">
+<div>
+<div class="tile-title">⚙️ Projects</div>
+<div class="tile-desc">
+Explore automation systems, dashboards and digital platforms I built.
 </div>
+</div>
+<div class="tile-arrow">→</div>
 </div>
 """, unsafe_allow_html=True)
-    st.page_link("pages/Projects.py", label="Explore")
+    st.page_link("pages/Projects.py", label="")
 
 with col3:
     st.markdown("""
-<div class="nav-tile">
-<div class="nav-title">💼 Experience</div>
-<div class="nav-desc">
-Professional journey
+<div class="tile">
+<div>
+<div class="tile-title">💼 Experience</div>
+<div class="tile-desc">
+Professional experience leading ICT initiatives and digital transformation.
 </div>
+</div>
+<div class="tile-arrow">→</div>
 </div>
 """, unsafe_allow_html=True)
-    st.page_link("pages/Experiences.py", label="Explore")
+    st.page_link("pages/Experiences.py", label="")
 
 with col4:
     st.markdown("""
-<div class="nav-tile">
-<div class="nav-title">📊 Dashboard</div>
-<div class="nav-desc">
-Interactive analytics work
+<div class="tile">
+<div>
+<div class="tile-title">📊 Dashboard</div>
+<div class="tile-desc">
+Interactive analytics dashboards and data visualisations.
 </div>
+</div>
+<div class="tile-arrow">→</div>
 </div>
 """, unsafe_allow_html=True)
-    st.page_link("pages/Dashboard.py", label="Explore")
+    st.page_link("pages/Dashboard.py", label="")
+
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
