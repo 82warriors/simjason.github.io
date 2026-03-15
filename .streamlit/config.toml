@@ -1,7 +1,25 @@
-[theme]
-base="dark"
-primaryColor="#00BFFF"
-backgroundColor="#0E1117"
-secondaryBackgroundColor="#1B1F2A"
-textColor="#FAFAFA"
+simjason.github.io
+│
+├ Home.py
+├ requirements.txt
+├ pages
+│   ├ AboutMe.py
+│   ├ Projects.py
+│   ├ Experiences.py
+│   └ Dashboard.py
+│
+└ .streamlit
+    └ config.toml
+
+    [theme]
+base="light"
+
+primaryColor="#4A90E2"
+
+backgroundColor="#FFFFFF"
+
+secondaryBackgroundColor="#F7F9FC"
+
+textColor="#1F2937"
+
 font="sans serif"
