@@ -1,43 +1,35 @@
 import streamlit as st
 
-st.set_page_config(page_title="Jason Sim", page_icon="🚀", layout="wide")
+st.set_page_config(
+    page_title="Jason Sim",
+    page_icon="🚀",
+    layout="centered"
+)
 
 st.title("Jason Sim")
 
-st.subheader("Website Analytics | Automation Systems | Data Dashboards")
+st.write("Technology Advocate")
 
-st.write("""
-Digital transformation and data analytics professional with over a decade
-of experience driving technology innovation and operational improvements.
+st.write("Automation Systems | Website Analytics | Data Dashboards")
 
-Experienced in building automation systems, analytics dashboards and
-web platforms that transform manual workflows into scalable digital solutions.
-""")
+st.markdown("---")
 
-st.divider()
+st.markdown("### Explore")
 
-st.header("Core Expertise")
-
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.markdown("### 🌐 Website Analytics")
-    st.write("Analyse website traffic, engagement metrics and user behaviour.")
+    st.page_link("AboutMe.py", label="About")
 
 with col2:
-    st.markdown("### ⚙️ Automation Systems")
-    st.write("Develop workflow automation using Google Apps Script.")
+    st.page_link("projects.py", label="Projects")
 
 with col3:
-    st.markdown("### 📊 Data Dashboards")
-    st.write("Build operational dashboards to support decision making.")
+    st.page_link("portfolio.py", label="Portfolio")
 
-st.divider()
+with col4:
+    st.page_link("dashboard.py", label="Dashboard")
 
-st.header("Featured Projects")
+st.markdown("---")
 
-st.write("""
-• ICT Booking Automation System  
-• ICT Inventory Microsite  
-• Operational Data Dashboards
-""")
+st.caption("© Jason Sim")
