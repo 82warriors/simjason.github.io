@@ -8,38 +8,40 @@ st.set_page_config(
 
 # HERO
 st.markdown("""
-<h1 style='text-align:center;font-size:64px;'>Jason Sim</h1>
-<p style='text-align:center;font-size:22px;color:gray;'>
+<h1 style='text-align:center;font-size:60px;'>Jason Sim</h1>
+<p style='text-align:center;font-size:22px;color:#666;'>
 Technology Advocate • Website Analytics • Automation Systems
 </p>
 """, unsafe_allow_html=True)
 
-st.markdown("---")
+st.markdown("<br>", unsafe_allow_html=True)
 
 # CARD STYLE
 st.markdown("""
 <style>
 
-div[data-testid="stPageLink"] {
-    border-radius:14px;
-    border:1px solid #e6e6e6;
-    padding:30px;
-    background: linear-gradient(135deg,#f8f9fa,#ffffff);
-    transition:0.2s;
+.card {
+    padding:35px;
+    border-radius:24px;
+    background:#f3f3f3;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.08);
+    transition:0.25s;
+    margin-bottom:25px;
 }
 
-div[data-testid="stPageLink"]:hover {
+.card:hover {
     transform:translateY(-6px);
-    box-shadow:0px 10px 25px rgba(0,0,0,0.15);
+    box-shadow:0px 16px 35px rgba(0,0,0,0.15);
 }
 
 .card-title {
-    font-size:24px;
-    font-weight:600;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
 .card-desc {
-    font-size:15px;
+    font-size:18px;
     color:#666;
 }
 
@@ -47,45 +49,81 @@ div[data-testid="stPageLink"]:hover {
 """, unsafe_allow_html=True)
 
 
-col1, col2 = st.columns(2)
-col3, col4 = st.columns(2)
+# CARD 1
+st.markdown('<div class="card">', unsafe_allow_html=True)
+
+st.page_link(
+    "pages/AboutMe.py",
+    label="About Me"
+)
+
+st.markdown("""
+<div class="card-title">
+About Me
+</div>
+<div class="card-desc">
+Learn about my background, experience and technology journey.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 
-# ABOUT
-with col1:
-    st.page_link(
-        "pages/AboutMe.py",
-        label="👤 About",
-    )
-    st.markdown('<div class="card-desc">Learn about my background, experience and technology interests.</div>', unsafe_allow_html=True)
+# CARD 2
+st.markdown('<div class="card">', unsafe_allow_html=True)
+
+st.page_link(
+    "pages/Projects.py",
+    label="Projects"
+)
+
+st.markdown("""
+<div class="card-title">
+Projects
+</div>
+<div class="card-desc">
+Automation systems, dashboards and digital platforms I have built.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 
-# PROJECTS
-with col2:
-    st.page_link(
-        "pages/Projects.py",
-        label="⚙️ Projects",
-    )
-    st.markdown('<div class="card-desc">Explore automation systems, dashboards and digital platforms I have built.</div>', unsafe_allow_html=True)
+# CARD 3
+st.markdown('<div class="card">', unsafe_allow_html=True)
+
+st.page_link(
+    "pages/Experiences.py",
+    label="Experience"
+)
+
+st.markdown("""
+<div class="card-title">
+Experience
+</div>
+<div class="card-desc">
+Professional work leading ICT initiatives and digital transformation.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 
-# EXPERIENCE
-with col3:
-    st.page_link(
-        "pages/Experiences.py",
-        label="💼 Experience",
-    )
-    st.markdown('<div class="card-desc">Professional experience leading ICT initiatives and digital transformation.</div>', unsafe_allow_html=True)
+# CARD 4
+st.markdown('<div class="card">', unsafe_allow_html=True)
 
+st.page_link(
+    "pages/Dashboard.py",
+    label="Dashboard"
+)
 
-# DASHBOARD
-with col4:
-    st.page_link(
-        "pages/Dashboard.py",
-        label="📊 Dashboard",
-    )
-    st.markdown('<div class="card-desc">Interactive analytics dashboards and data visualisations.</div>', unsafe_allow_html=True)
+st.markdown("""
+<div class="card-title">
+Dashboard
+</div>
+<div class="card-desc">
+Interactive analytics dashboards and data visualisations.
+</div>
+""", unsafe_allow_html=True)
 
-
-st.markdown("---")
-st.caption("© Jason Sim")
+st.markdown("</div>", unsafe_allow_html=True)
