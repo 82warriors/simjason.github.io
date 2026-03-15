@@ -1,14 +1,14 @@
 import streamlit as st
 
-st.set_page_config(page_title="Jason Sim", page_icon="🚀", layout="wide")
+st.set_page_config(
+    page_title="Jason Sim",
+    page_icon="🚀",
+    layout="centered"
+)
 
-# HERO
-st.markdown("""
-<h1 style='text-align:center;font-size:60px;'>Jason Sim</h1>
-<p style='text-align:center;font-size:22px;color:gray;'>
-Technology Advocate • Website Analytics • Automation Systems
-</p>
-""", unsafe_allow_html=True)
+st.title("Jason Sim")
+st.write("Technology Advocate")
+st.write("Automation Systems | Website Analytics | Data Dashboards")
 
 st.markdown("---")
 
@@ -17,25 +17,30 @@ st.markdown("""
 <style>
 
 .card {
-    padding:35px;
-    border-radius:14px;
+    padding:22px;
+    border-radius:12px;
     border:1px solid #e6e6e6;
-    background: linear-gradient(135deg,#f8f9fa,#ffffff);
     text-align:center;
+    background:linear-gradient(135deg,#f8f9fa,#ffffff);
     transition:0.2s;
 }
 
 .card:hover {
-    transform:translateY(-6px);
-    box-shadow:0px 10px 25px rgba(0,0,0,0.15);
+    transform:translateY(-4px);
+    box-shadow:0px 8px 20px rgba(0,0,0,0.15);
 }
 
-.card-title {
-    font-size:24px;
-    font-weight:600;
+.card a {
+    text-decoration:none;
+    color:black;
+    display:block;
 }
 
-.card-desc {
+.card h3 {
+    margin-bottom:5px;
+}
+
+.card p {
     font-size:14px;
     color:#666;
 }
@@ -43,71 +48,57 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-col1, col2 = st.columns(2)
-col3, col4 = st.columns(2)
 
-# ABOUT CARD
+col1, col2, col3, col4 = st.columns(4)
+
+
 with col1:
     st.markdown("""
+<a href="AboutMe">
 <div class="card">
-<div style="font-size:36px">👤</div>
-<div class="card-title">About</div>
-<div class="card-desc">
-Learn more about my background and expertise.
+<h3>👤 About</h3>
+<p>Who I am and what I do.</p>
 </div>
-</div>
+</a>
 """, unsafe_allow_html=True)
-
-    if st.button("Open", key="about"):
-        st.switch_page("pages/AboutMe.py")
+    st.page_link("pages/AboutMe.py", label="")
 
 
-# PROJECTS CARD
 with col2:
     st.markdown("""
+<a href="Projects">
 <div class="card">
-<div style="font-size:36px">⚙️</div>
-<div class="card-title">Projects</div>
-<div class="card-desc">
-Systems, automation tools and digital platforms I built.
+<h3>⚙️ Projects</h3>
+<p>Systems and platforms I built.</p>
 </div>
-</div>
+</a>
 """, unsafe_allow_html=True)
-
-    if st.button("Open", key="projects"):
-        st.switch_page("pages/projects.py")
+    st.page_link("pages/projects.py", label="")
 
 
-# PORTFOLIO CARD
 with col3:
     st.markdown("""
+<a href="Portfolio">
 <div class="card">
-<div style="font-size:36px">📊</div>
-<div class="card-title">Portfolio</div>
-<div class="card-desc">
-Technology initiatives, analytics work and digital platforms.
+<h3>📊 Portfolio</h3>
+<p>Digital platforms and analytics work.</p>
 </div>
-</div>
+</a>
 """, unsafe_allow_html=True)
-
-    if st.button("Open", key="portfolio"):
-        st.switch_page("pages/portfolio.py")
+    st.page_link("pages/portfolio.py", label="")
 
 
-# DASHBOARD CARD
 with col4:
     st.markdown("""
+<a href="Dashboard">
 <div class="card">
-<div style="font-size:36px">📈</div>
-<div class="card-title">Dashboard</div>
-<div class="card-desc">
-Interactive analytics dashboards and visualisations.
+<h3>📈 Dashboard</h3>
+<p>Interactive analytics dashboard.</p>
 </div>
-</div>
+</a>
 """, unsafe_allow_html=True)
+    st.page_link("pages/dashboard.py", label="")
 
-    if st.button("Open", key="dashboard"):
-        st.switch_page("pages/dashboard.py")
 
 st.markdown("---")
 st.caption("© Jason Sim")
