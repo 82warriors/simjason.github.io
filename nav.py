@@ -5,15 +5,16 @@ def navbar():
     st.markdown("""
     <style>
 
+    /* hide sidebar */
     [data-testid="stSidebar"] {display:none}
 
-    .nav-container{
+    .nav{
         display:flex;
         justify-content:space-between;
         align-items:center;
-        padding:20px 40px;
+        padding:20px 60px;
         border-bottom:1px solid #eee;
-        font-family: sans-serif;
+        font-family:sans-serif;
     }
 
     .logo{
@@ -24,47 +25,35 @@ def navbar():
     .menu{
         display:flex;
         gap:40px;
-        font-size:16px;
+        font-size:18px;
     }
 
-    .menu-item{
-        cursor:pointer;
-        color:#111;
+    .menu a{
         text-decoration:none;
+        color:#111;
+        font-weight:500;
     }
 
-    .menu-item:hover{
+    .menu a:hover{
         color:#6366f1;
     }
 
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="nav-container">', unsafe_allow_html=True)
+    st.markdown("""
+    <div class="nav">
 
-    col1, col2 = st.columns([6,4])
+        <div class="logo">
+        Jason Sim
+        </div>
 
-    with col1:
-        st.markdown('<div class="logo">Jason Sim</div>', unsafe_allow_html=True)
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/AboutMe">About</a>
+            <a href="/Experiences">Experiences</a>
+            <a href="/Projects">Projects</a>
+        </div>
 
-    with col2:
-
-        colA, colB, colC, colD = st.columns(4)
-
-        with colA:
-            if st.button("Home"):
-                st.switch_page("Home.py")
-
-        with colB:
-            if st.button("About"):
-                st.switch_page("pages/AboutMe.py")
-
-        with colC:
-            if st.button("Experiences"):
-                st.switch_page("pages/Experiences.py")
-
-        with colD:
-            if st.button("Projects"):
-                st.switch_page("pages/Projects.py")
-
-    st.markdown('</div>', unsafe_allow_html=True)
+    </div>
+    """, unsafe_allow_html=True)
