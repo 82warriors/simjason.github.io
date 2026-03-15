@@ -1,28 +1,30 @@
 import streamlit as st
+from nav import navbar
 
-st.set_page_config(page_title="Experiences", page_icon="💼", layout="wide")
+st.set_page_config(layout="wide")
 
-st.title("Professional Experience")
+navbar()
+
+st.title("Experiences")
 
 st.subheader("Infocomm Technology Manager / Associate")
-st.write("Ministry of Education Schools | 2018 – Present")
 
 st.write("""
-• Lead ICT and digital initiatives supporting teaching and learning technologies  
-• Develop automation systems using Google Apps Script  
-• Build dashboards to analyse operational data and improve reporting  
-• Manage ICT infrastructure and device deployments  
-• Conduct training to improve staff digital competency  
-• Maintain school website and support cyber wellness education
+Ministry of Education — 2018 to Present
+
+• Lead ICT and digital initiatives supporting teaching and learning  
+• Develop automation solutions using Google Apps Script  
+• Build dashboards for operational reporting and analysis  
+• Manage ICT infrastructure and device deployments
 """)
 
-st.subheader("Digital Trainer / Executive / Recruitment Specialist")
-st.write("Eduvantage Pte Ltd | 2014 – 2018")
+st.subheader("Digital Trainer / Executive")
 
 st.write("""
-• Managed recruitment processes and candidate screening  
-• Published recruitment campaigns across digital platforms  
-• Maintained and updated company website  
-• Delivered training programmes for staff  
-• Supported schools in technology planning and programmes
+Eduvantage Pte Ltd — 2014 to 2018
+
+• Managed recruitment processes  
+• Maintained company website  
+• Delivered training programmes  
+• Supported schools in technology planning
 """)
