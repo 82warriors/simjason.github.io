@@ -10,7 +10,7 @@ st.title("Projects")
 st.subheader("ICT Booking Automation")
 
 st.write("""
-Automated equipment booking using
+Automated equipment booking workflow using
 Google Forms, Sheets and Apps Script.
 """)
 
@@ -24,7 +24,7 @@ Analytics dashboard monitoring ICT asset usage.
 
 st.divider()
 
-st.subheader("Attendance Analytics System")
+st.subheader("Attendance Analytics")
 
 st.write("""
 Excel-based system identifying attendance trends.
