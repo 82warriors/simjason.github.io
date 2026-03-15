@@ -94,6 +94,11 @@ st.markdown("""
     transform:translateX(6px);
 }
 
+.tile-link{
+    text-decoration:none;
+    color:inherit;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -156,6 +161,7 @@ col3, col4 = st.columns(2)
 
 with col1:
     st.markdown("""
+<a class="tile-link" href="?page=AboutMe">
 <div class="tile">
 <div>
 <div class="tile-title">👤 About</div>
@@ -165,11 +171,12 @@ Learn about my background, experience and technology journey.
 </div>
 <div class="tile-arrow">→</div>
 </div>
+</a>
 """, unsafe_allow_html=True)
-    st.page_link("pages/AboutMe.py", label="")
 
 with col2:
     st.markdown("""
+<a class="tile-link" href="?page=Projects">
 <div class="tile">
 <div>
 <div class="tile-title">⚙️ Projects</div>
@@ -179,11 +186,12 @@ Explore automation systems, dashboards and digital platforms I built.
 </div>
 <div class="tile-arrow">→</div>
 </div>
+</a>
 """, unsafe_allow_html=True)
-    st.page_link("pages/Projects.py", label="")
 
 with col3:
     st.markdown("""
+<a class="tile-link" href="?page=Experiences">
 <div class="tile">
 <div>
 <div class="tile-title">💼 Experience</div>
@@ -193,11 +201,12 @@ Professional experience leading ICT initiatives and digital transformation.
 </div>
 <div class="tile-arrow">→</div>
 </div>
+</a>
 """, unsafe_allow_html=True)
-    st.page_link("pages/Experiences.py", label="")
 
 with col4:
     st.markdown("""
+<a class="tile-link" href="?page=Dashboard">
 <div class="tile">
 <div>
 <div class="tile-title">📊 Dashboard</div>
@@ -207,10 +216,9 @@ Interactive analytics dashboards and data visualisations.
 </div>
 <div class="tile-arrow">→</div>
 </div>
+</a>
 """, unsafe_allow_html=True)
-    st.page_link("pages/Dashboard.py", label="")
 
 
 st.markdown("<br><br>", unsafe_allow_html=True)
-
 st.caption("© Jason Sim")
