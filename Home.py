@@ -9,7 +9,7 @@ st.markdown("""
 <style>
 
 .hero-title{
-font-size:60px;
+font-size:56px;
 font-weight:700;
 background: linear-gradient(90deg,#6366F1,#4CC9F0);
 -webkit-background-clip:text;
@@ -19,6 +19,10 @@ background: linear-gradient(90deg,#6366F1,#4CC9F0);
 .hero-sub{
 font-size:22px;
 color:#6B7280;
+}
+
+.profile-img{
+border-radius:12px;
 }
 
 .card{
@@ -40,16 +44,28 @@ color:#6366F1;
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="hero-title">Automation Systems & Data Analytics</div>', unsafe_allow_html=True)
+# HERO SECTION
 
-st.markdown('<div class="hero-sub">Jason Sim</div>', unsafe_allow_html=True)
+col1, col2 = st.columns([2,1])
 
-st.write("""
+with col1:
+
+    st.markdown('<div class="hero-title">Jason Sim</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="hero-sub">Automation Systems • Website Analytics • Data Dashboards</div>', unsafe_allow_html=True)
+
+    st.write("""
 I build automation systems, analytics dashboards and digital platforms
 that transform operational data into actionable insights.
 """)
 
+with col2:
+
+    st.image("jason.png", use_container_width=True)
+
 st.divider()
+
+# WHAT I DO
 
 st.markdown('<h2 class="section-title">What I Do</h2>', unsafe_allow_html=True)
 
