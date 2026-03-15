@@ -8,14 +8,15 @@ st.set_page_config(
 
 # HERO SECTION
 st.title("Jason Sim")
-st.subheader("Digital Systems Builder")
+st.subheader("Technology Advocate | Automation Systems")
 
 st.write("""
-I design automation systems, dashboards, and ICT solutions
-that simplify work and improve operational efficiency.
+Digital transformation and data analytics professional with over a decade
+of experience driving technology innovation and operational improvements
+in the education sector.
 
-My work focuses on building practical systems that improve workflows,
-reduce manual processes, and provide better operational insights.
+I design automation systems, dashboards, and ICT solutions
+that transform manual workflows into scalable digital systems.
 """)
 
 st.button("Explore My Projects")
@@ -28,16 +29,16 @@ st.header("Focus Areas")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("### ⚙️ Automation")
-    st.write("Workflow automation and digital systems that streamline operations.")
+    st.markdown("### ⚙️ Automation Systems")
+    st.write("Workflow automation using Google Apps Script and digital systems.")
 
 with col2:
-    st.markdown("### 📊 Dashboards")
-    st.write("Data dashboards that transform raw data into clear insights.")
+    st.markdown("### 📊 Data Dashboards")
+    st.write("Operational dashboards for analytics and decision-making.")
 
 with col3:
-    st.markdown("### 💻 ICT Systems")
-    st.write("Custom ICT systems for inventory, booking, and management.")
+    st.markdown("### 🌐 Digital Platforms")
+    st.write("Web platforms, ICT portals, and digital infrastructure.")
 
 st.divider()
 
@@ -48,44 +49,44 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
-### ⚙️ Equipment Booking System
+### ⚙️ ICT Booking Automation
 
-Automated equipment booking workflow
-with approval notifications.
+Automated equipment booking workflow using  
+Google Forms, Sheets, and Apps Script.
 
 **Impact**
 
-- Reduced manual coordination  
-- Faster approvals  
+- Automated approval workflows  
+- Real-time booking notifications  
 - Improved equipment tracking
 """)
 
 with col2:
     st.markdown("""
-### 📦 Inventory Management System
+### 📦 ICT Inventory Microsite
 
-Digital asset tracking system with
-analytics dashboards.
+Developed ICT inventory system using  
+Google Sites and GitHub Pages.
 
 **Impact**
 
-- Centralised equipment tracking  
-- Real-time reporting  
-- Improved resource management
+- Centralised asset information  
+- Web-based operational reports  
+- Improved ICT record accessibility
 """)
 
 with col3:
     st.markdown("""
-### 🌐 ICT Staff Portal
+### 📊 Operational Dashboards
 
-One-stop portal for ICT services
-and staff requests.
+Built Excel and Google Sheets dashboards  
+to analyse ICT resource usage.
 
 **Impact**
 
-- Simplified ICT processes  
-- Improved staff access  
-- Consolidated digital services
+- Data-driven reporting  
+- Operational insights  
+- Resource planning
 """)
 
 st.divider()
@@ -102,7 +103,7 @@ with col2:
     st.metric("Dashboards Built", "15+")
 
 with col3:
-    st.metric("ICT Solutions", "20+")
+    st.metric("ICT Platforms", "20+")
 
 st.divider()
 
@@ -110,11 +111,36 @@ st.divider()
 st.header("Technology Stack")
 
 st.markdown("""
-**Languages & Tools**
+**Programming & Automation**
 
-Python • Streamlit • Google Apps Script  
-Excel Automation • Data Analytics  
-Workflow Automation • ICT Infrastructure
+Python • Google Apps Script
+
+**Data Analytics**
+
+Excel • Google Sheets • Dashboard Development
+
+**Web Platforms**
+
+Google Sites • GitHub Pages • Isomer CMS • Swiit CMS
+
+**Digital Analytics**
+
+Meta Insights • Engagement Analytics
+""")
+
+st.divider()
+
+# PROFESSIONAL EXPERIENCE
+st.header("Professional Experience")
+
+st.markdown("""
+**Infocomm Technology Manager | Ministry of Education**
+
+- Lead ICT and digital initiatives supporting teaching and learning
+- Develop automation solutions using Google Apps Script
+- Analyse operational data and build reporting dashboards
+- Manage ICT infrastructure and digital platforms
+- Conduct staff training to improve digital competency
 """)
 
 st.divider()
