@@ -77,9 +77,9 @@ and analytics solutions I have built.
 
 with col3:
     st.markdown("""
-<a href="?page=portfolio">
+<a href="?page=Experiences">
 <div class="card">
-<div class="card-title">📊 Portfolio</div>
+<div class="card-title">📊 Experiences</div>
 <div class="card-desc">
 View my digital platforms, website analytics
 and operational technology initiatives.
