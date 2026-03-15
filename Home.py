@@ -13,7 +13,12 @@ st.subheader("Digital Systems Builder")
 st.write("""
 I design automation systems, dashboards, and ICT solutions
 that simplify work and improve operational efficiency.
+
+My work focuses on building practical systems that improve workflows,
+reduce manual processes, and provide better operational insights.
 """)
+
+st.button("Explore My Projects")
 
 st.divider()
 
@@ -24,15 +29,15 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("### ⚙️ Automation")
-    st.write("Workflow automation and digital systems.")
+    st.write("Workflow automation and digital systems that streamline operations.")
 
 with col2:
     st.markdown("### 📊 Dashboards")
-    st.write("Data dashboards for insights and reporting.")
+    st.write("Data dashboards that transform raw data into clear insights.")
 
 with col3:
     st.markdown("### 💻 ICT Systems")
-    st.write("Custom systems for management and operations.")
+    st.write("Custom ICT systems for inventory, booking, and management.")
 
 st.divider()
 
@@ -49,8 +54,10 @@ Automated equipment booking workflow
 with approval notifications.
 
 **Impact**
+
 - Reduced manual coordination  
-- Faster approvals
+- Faster approvals  
+- Improved equipment tracking
 """)
 
 with col2:
@@ -61,8 +68,10 @@ Digital asset tracking system with
 analytics dashboards.
 
 **Impact**
+
 - Centralised equipment tracking  
-- Real-time reporting
+- Real-time reporting  
+- Improved resource management
 """)
 
 with col3:
@@ -73,8 +82,10 @@ One-stop portal for ICT services
 and staff requests.
 
 **Impact**
+
 - Simplified ICT processes  
-- Improved staff access
+- Improved staff access  
+- Consolidated digital services
 """)
 
 st.divider()
@@ -98,20 +109,24 @@ st.divider()
 # TECHNOLOGY STACK
 st.header("Technology Stack")
 
-st.write("""
+st.markdown("""
+**Languages & Tools**
+
 Python • Streamlit • Google Apps Script  
-Data Analytics • Workflow Automation  
-Excel Systems • ICT Infrastructure
+Excel Automation • Data Analytics  
+Workflow Automation • ICT Infrastructure
 """)
 
 st.divider()
 
-# FOOTER
-st.markdown("""
-### Connect
+# CONTACT
+st.header("Connect")
 
+st.markdown("""
 GitHub: https://github.com/simjason  
 Website: https://simjason.com
 """)
 
-st.markdown("© Jason Sim")
+st.markdown("---")
+
+st.caption("© Jason Sim")
