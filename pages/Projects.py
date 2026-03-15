@@ -10,34 +10,22 @@ st.title("Projects")
 st.subheader("ICT Booking Automation")
 
 st.write("""
-Automated equipment booking workflow using
+Automated equipment booking using
 Google Forms, Sheets and Apps Script.
-
-Impact
-• Reduced manual coordination
-• Enabled real-time resource tracking
 """)
 
 st.divider()
 
-st.subheader("ICT Inventory Dashboard")
+st.subheader("Inventory Dashboard")
 
 st.write("""
-Dashboard analysing ICT asset usage and inventory data.
-
-Impact
-• Centralised equipment tracking
-• Improved reporting visibility
+Analytics dashboard monitoring ICT asset usage.
 """)
 
 st.divider()
 
-st.subheader("Late Coming Monitoring System")
+st.subheader("Attendance Analytics System")
 
 st.write("""
-Excel-based analytics system analysing attendance trends.
-
-Impact
-• Automated reports
-• Identified behavioural patterns
+Excel-based system identifying attendance trends.
 """)
