@@ -11,12 +11,18 @@ st.markdown("""
 .hero{
 text-align:center;
 padding-top:120px;
-padding-bottom:100px;
+padding-bottom:80px;
 }
 
 .hero-title{
 font-size:64px;
 font-weight:700;
+}
+
+.hero-highlight{
+background: linear-gradient(90deg,#6366f1,#4cc9f0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero-sub{
@@ -38,7 +44,7 @@ margin-top:80px;
 
 .card{
 padding:30px;
-border-radius:12px;
+border-radius:16px;
 background:#f9fafb;
 text-align:center;
 transition:0.2s;
@@ -58,11 +64,11 @@ st.markdown("""
 <div class="hero">
 
 <div class="hero-title">
-Automation Systems & Data Analytics
+Jason <span class="hero-highlight">Sim</span>
 </div>
 
 <div class="hero-sub">
-Jason Sim
+Automation Systems • Website Analytics • Data Dashboards
 </div>
 
 <div class="hero-desc">
@@ -72,7 +78,6 @@ that transform operational data into actionable insights.
 
 </div>
 """, unsafe_allow_html=True)
-
 
 # WHAT I DO
 
@@ -84,7 +89,7 @@ with col1:
     st.markdown("""
 <div class="card">
 <h3>⚙️ Automation</h3>
-<p>Workflow automation and digital processes.</p>
+<p>Workflow automation that improves efficiency.</p>
 </div>
 """,unsafe_allow_html=True)
 
@@ -92,18 +97,47 @@ with col2:
     st.markdown("""
 <div class="card">
 <h3>📊 Analytics</h3>
-<p>Data dashboards for operational insights.</p>
+<p>Dashboards that support operational insights.</p>
 </div>
 """,unsafe_allow_html=True)
 
 with col3:
     st.markdown("""
 <div class="card">
-<h3>💻 ICT Systems</h3>
-<p>Technology platforms supporting digital operations.</p>
+<h3>💻 Digital Systems</h3>
+<p>ICT platforms that simplify processes.</p>
 </div>
 """,unsafe_allow_html=True)
 
+# FEATURED WORK
+
+st.markdown("## Featured Projects")
+
+col1,col2,col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+<div class="card">
+<h3>ICT Booking Automation</h3>
+<p>Automated equipment booking workflow.</p>
+</div>
+""",unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+<div class="card">
+<h3>Inventory Dashboard</h3>
+<p>Analytics dashboard for ICT asset tracking.</p>
+</div>
+""",unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+<div class="card">
+<h3>Attendance Analytics</h3>
+<p>Excel-based monitoring and reporting system.</p>
+</div>
+""",unsafe_allow_html=True)
 
 # EXPLORE
 
