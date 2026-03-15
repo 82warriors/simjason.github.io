@@ -8,14 +8,11 @@ navbar()
 st.title("About Me")
 
 st.write("""
-I am an Infocomm Technology professional focused on building
+I am an Infocomm Technology professional passionate about
 automation systems, analytics dashboards and digital platforms.
-
-My work centres on simplifying workflows, improving operational
-efficiency and transforming data into insights.
 """)
 
-st.markdown("### Technology")
+st.subheader("Technology")
 
 st.write("""
 Python  
