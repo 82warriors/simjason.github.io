@@ -6,75 +6,124 @@ st.set_page_config(
     layout="wide"
 )
 
-# STYLE
+# --- STYLE ---
 st.markdown("""
 <style>
 
 .hero {
     text-align:center;
-    padding:100px 20px;
-    background: linear-gradient(135deg,#7aa2ff,#8fd3f4,#a1ffce);
-    border-radius:20px;
+    padding:120px 20px 80px 20px;
 }
 
 .hero-title {
     font-size:72px;
     font-weight:700;
-    color:white;
 }
 
-.hero-sub {
-    font-size:26px;
-    color:white;
+.hero-tagline {
+    font-size:24px;
+    color:#6b7280;
 }
 
-.nav-link {
-    font-size:28px;
-    font-weight:600;
+.highlight {
+    background: linear-gradient(120deg,#7c6cf6,#4cc9f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section {
     text-align:center;
     padding:40px;
     transition:0.2s;
 }
 
-.nav-link:hover {
-    transform:translateY(-5px);
+.section:hover {
+    transform:translateY(-4px);
 }
 
-.about {color:#6c63ff;}
-.projects {color:#ff7a7a;}
-.experience {color:#ffb347;}
-.dashboard {color:#4cd964;}
+.nav-title {
+    font-size:30px;
+    font-weight:600;
+}
+
+.nav-desc {
+    color:#6b7280;
+}
 
 </style>
 """, unsafe_allow_html=True)
 
-# HERO
+
+# --- HERO ---
 st.markdown("""
 <div class="hero">
-<div class="hero-title">Jason Sim</div>
-<div class="hero-sub">
+<div class="hero-title">
+Jason <span class="highlight">Sim</span>
+</div>
+
+<div class="hero-tagline">
 Technology Advocate • Website Analytics • Automation Systems
 </div>
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("---")
 
-# NAVIGATION
+
+# --- NAVIGATION ---
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.markdown('<div class="nav-link about">👤 About</div>', unsafe_allow_html=True)
-    st.page_link("pages/AboutMe.py", label="")
+    st.markdown("""
+<div class="section">
+<div class="nav-title">👤 About</div>
+<div class="nav-desc">
+Who I am and what I do
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.page_link("pages/AboutMe.py", label="Explore")
+
 
 with col2:
-    st.markdown('<div class="nav-link projects">⚙️ Projects</div>', unsafe_allow_html=True)
-    st.page_link("pages/Projects.py", label="")
+    st.markdown("""
+<div class="section">
+<div class="nav-title">⚙️ Projects</div>
+<div class="nav-desc">
+Systems and platforms I built
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.page_link("pages/Projects.py", label="Explore")
+
 
 with col3:
-    st.markdown('<div class="nav-link experience">💼 Experience</div>', unsafe_allow_html=True)
-    st.page_link("pages/Experiences.py", label="")
+    st.markdown("""
+<div class="section">
+<div class="nav-title">💼 Experience</div>
+<div class="nav-desc">
+My professional journey
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.page_link("pages/Experiences.py", label="Explore")
+
 
 with col4:
-    st.markdown('<div class="nav-link dashboard">📊 Dashboard</div>', unsafe_allow_html=True)
-    st.page_link("pages/Dashboard.py", label="")
+    st.markdown("""
+<div class="section">
+<div class="nav-title">📊 Dashboard</div>
+<div class="nav-desc">
+Interactive analytics work
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.page_link("pages/Dashboard.py", label="Explore")
+
+st.markdown("---")
+
+st.caption("© Jason Sim")
