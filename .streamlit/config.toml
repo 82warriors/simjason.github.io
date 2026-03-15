@@ -1,17 +1,4 @@
-simjason.github.io
-│
-├ Home.py
-├ requirements.txt
-├ pages
-│   ├ AboutMe.py
-│   ├ Projects.py
-│   ├ Experiences.py
-│   └ Dashboard.py
-│
-└ .streamlit
-    └ config.toml
-
-    [theme]
+[theme]
 base="light"
 
 primaryColor="#4A90E2"
