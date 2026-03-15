@@ -8,7 +8,7 @@ navbar()
 st.title("About Me")
 
 st.write("""
-I am an Infocomm Technology professional passionate about
+I am an Infocomm Technology professional focused on building
 automation systems, analytics dashboards and digital platforms.
 """)
 
