@@ -4,17 +4,17 @@ st.title("About Me")
 
 st.write("""
 I work at the intersection of education and technology,
-designing digital systems that improve efficiency and simplify workflows.
+building systems that streamline processes and improve efficiency.
 
-My work focuses on automation, data analytics,
-and ICT infrastructure within organisations.
+My focus is on developing practical solutions that help organisations
+reduce manual work and make better decisions using data.
 """)
 
-st.header("Areas of Interest")
+st.header("Areas of Focus")
 
 st.write("""
 • Automation of workflows  
-• Data dashboards  
-• ICT systems in education  
+• Data dashboards and analytics  
+• ICT infrastructure and systems  
 • Digital transformation
 """)
