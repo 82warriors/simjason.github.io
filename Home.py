@@ -31,36 +31,42 @@ st.markdown("""
 
 .card:hover {
     transform:translateY(-6px);
-    box-shadow:0px 16px 35px rgba(0,0,0,0.15);
+    box-shadow:0px 18px 40px rgba(0,0,0,0.15);
 }
 
 .card-title {
     font-size:32px;
     font-weight:700;
     margin-bottom:10px;
+    transition:0.2s;
 }
 
 .card-desc {
     font-size:18px;
-    color:#666;
+    color:#777;
+    transition:0.2s;
+}
+
+.card:hover .card-title {
+    color:#000;
+    transform:translateY(-2px);
+}
+
+.card:hover .card-desc {
+    color:#444;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 
-# CARD 1
+# ABOUT CARD
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
-st.page_link(
-    "pages/AboutMe.py",
-    label="About Me"
-)
+st.page_link("pages/AboutMe.py", label="")
 
 st.markdown("""
-<div class="card-title">
-About Me
-</div>
+<div class="card-title">About Me</div>
 <div class="card-desc">
 Learn about my background, experience and technology journey.
 </div>
@@ -69,18 +75,13 @@ Learn about my background, experience and technology journey.
 st.markdown("</div>", unsafe_allow_html=True)
 
 
-# CARD 2
+# PROJECTS CARD
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
-st.page_link(
-    "pages/Projects.py",
-    label="Projects"
-)
+st.page_link("pages/Projects.py", label="")
 
 st.markdown("""
-<div class="card-title">
-Projects
-</div>
+<div class="card-title">Projects</div>
 <div class="card-desc">
 Automation systems, dashboards and digital platforms I have built.
 </div>
@@ -89,18 +90,13 @@ Automation systems, dashboards and digital platforms I have built.
 st.markdown("</div>", unsafe_allow_html=True)
 
 
-# CARD 3
+# EXPERIENCE CARD
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
-st.page_link(
-    "pages/Experiences.py",
-    label="Experience"
-)
+st.page_link("pages/Experiences.py", label="")
 
 st.markdown("""
-<div class="card-title">
-Experience
-</div>
+<div class="card-title">Experience</div>
 <div class="card-desc">
 Professional work leading ICT initiatives and digital transformation.
 </div>
@@ -109,18 +105,13 @@ Professional work leading ICT initiatives and digital transformation.
 st.markdown("</div>", unsafe_allow_html=True)
 
 
-# CARD 4
+# DASHBOARD CARD
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
-st.page_link(
-    "pages/Dashboard.py",
-    label="Dashboard"
-)
+st.page_link("pages/Dashboard.py", label="")
 
 st.markdown("""
-<div class="card-title">
-Dashboard
-</div>
+<div class="card-title">Dashboard</div>
 <div class="card-desc">
 Interactive analytics dashboards and data visualisations.
 </div>
