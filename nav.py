@@ -5,9 +5,9 @@ def navbar():
     st.markdown("""
     <style>
 
-    [data-testid="stSidebar"] {display:none;}
+    [data-testid="stSidebar"] {display:none}
 
-    .nav-container{
+    .nav{
         display:flex;
         justify-content:space-between;
         align-items:center;
@@ -16,44 +16,42 @@ def navbar():
         font-family:sans-serif;
     }
 
-    .nav-logo{
+    .logo{
         font-size:20px;
         font-weight:700;
     }
 
-    .nav-menu{
+    .menu{
         display:flex;
         gap:40px;
         font-size:16px;
     }
 
-    .nav-link{
+    .menu a{
         text-decoration:none;
         color:#111;
         font-weight:500;
-        position:relative;
     }
 
-    .nav-link:hover{
+    .menu a:hover{
         color:#6366f1;
     }
 
     </style>
     """, unsafe_allow_html=True)
 
-
     st.markdown("""
-    <div class="nav-container">
+    <div class="nav">
 
-        <div class="nav-logo">
+        <div class="logo">
         Jason Sim
         </div>
 
-        <div class="nav-menu">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/AboutMe">About</a>
-            <a class="nav-link" href="/Experiences">Experiences</a>
-            <a class="nav-link" href="/Projects">Projects</a>
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/AboutMe">About</a>
+            <a href="/Experiences">Experiences</a>
+            <a href="/Projects">Projects</a>
         </div>
 
     </div>
