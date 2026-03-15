@@ -5,10 +5,8 @@ def navbar():
     st.markdown("""
     <style>
 
-    /* hide sidebar */
     [data-testid="stSidebar"] {display:none;}
 
-    /* navigation bar */
     .nav-container{
         display:flex;
         justify-content:space-between;
@@ -18,13 +16,11 @@ def navbar():
         font-family:sans-serif;
     }
 
-    /* logo */
     .nav-logo{
         font-size:20px;
         font-weight:700;
     }
 
-    /* menu */
     .nav-menu{
         display:flex;
         gap:40px;
@@ -38,28 +34,13 @@ def navbar():
         position:relative;
     }
 
-    /* underline animation */
-    .nav-link::after{
-        content:"";
-        position:absolute;
-        width:0;
-        height:2px;
-        left:0;
-        bottom:-4px;
-        background:#6366f1;
-        transition:width 0.25s ease;
-    }
-
-    .nav-link:hover::after{
-        width:100%;
-    }
-
     .nav-link:hover{
         color:#6366f1;
     }
 
     </style>
     """, unsafe_allow_html=True)
+
 
     st.markdown("""
     <div class="nav-container">
