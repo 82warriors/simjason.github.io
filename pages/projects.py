@@ -3,19 +3,30 @@ import streamlit as st
 st.title("Projects")
 
 st.subheader("ICT Equipment Booking System")
+
 st.write("""
-A system that allows staff to book equipment.
-Approvals automatically trigger notification emails to users.
+**Problem**
+Manual equipment booking caused scheduling conflicts.
+
+**Solution**
+Developed an automated booking system using Google Forms
+and Apps Script with approval workflows.
+
+**Impact**
+Reduced admin workload and improved booking transparency.
 """)
 
-st.subheader("Inventory Management System")
-st.write("""
-A digital inventory system with dashboards and analytics
-to monitor equipment usage and status.
-""")
+st.divider()
 
-st.subheader("ICT Staff Microsite")
+st.subheader("ICT Inventory System")
+
 st.write("""
-A one-stop portal that consolidates ICT requests,
-QR forms and useful staff links.
+**Problem**
+Tracking ICT equipment across locations was inefficient.
+
+**Solution**
+Built an inventory dashboard with analytics and reporting.
+
+**Impact**
+Improved asset visibility and equipment management.
 """)
