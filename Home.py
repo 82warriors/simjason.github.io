@@ -6,10 +6,13 @@ st.set_page_config(
     layout="wide"
 )
 
-# -------- STYLE --------
-
+# -------- HIDE SIDEBAR --------
 st.markdown("""
 <style>
+
+[data-testid="stSidebar"] {
+    display: none;
+}
 
 .hero{
 text-align:center;
@@ -41,23 +44,41 @@ margin:auto;
 margin-top:20px;
 }
 
-.section{
+.icon-card{
 text-align:center;
 padding:40px;
+border-radius:16px;
+background:#f8fafc;
+transition:0.25s;
+cursor:pointer;
 }
 
-.section-title{
-font-size:30px;
+.icon-card:hover{
+transform:translateY(-6px);
+box-shadow:0px 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+font-size:50px;
+}
+
+.icon-title{
+font-size:22px;
 font-weight:600;
+margin-top:10px;
 }
 
-.section-desc{
+.icon-desc{
 color:#6b7280;
+}
+
+.link{
+text-decoration:none;
+color:inherit;
 }
 
 </style>
 """, unsafe_allow_html=True)
-
 
 # -------- HERO --------
 
@@ -73,49 +94,55 @@ Automation Systems • Website Analytics • Data Dashboards
 </div>
 
 <div class="hero-desc">
-I design automation systems and analytics dashboards
-that transform operational data into insights.
+I design automation systems and analytics dashboards that
+transform operational data into insights.
 </div>
 
 </div>
 """, unsafe_allow_html=True)
 
+# -------- NAVIGATION ICONS --------
 
-# -------- WHAT I DO --------
-
-col1,col2,col3 = st.columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
-<div class="section">
-<div class="section-title">⚙️ Automation</div>
-<div class="section-desc">
-Workflow automation and digital systems.
+<a class="link" href="/AboutMe">
+<div class="icon-card">
+<div class="icon">👤</div>
+<div class="icon-title">About Me</div>
+<div class="icon-desc">
+Background and expertise
 </div>
 </div>
+</a>
 """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-<div class="section">
-<div class="section-title">📊 Analytics</div>
-<div class="section-desc">
-Data dashboards for operational insights.
+<a class="link" href="/Experiences">
+<div class="icon-card">
+<div class="icon">💼</div>
+<div class="icon-title">Experiences</div>
+<div class="icon-desc">
+Professional journey
 </div>
 </div>
+</a>
 """, unsafe_allow_html=True)
 
 with col3:
     st.markdown("""
-<div class="section">
-<div class="section-title">💻 ICT Systems</div>
-<div class="section-desc">
-Technology platforms supporting digital operations.
+<a class="link" href="/Projects">
+<div class="icon-card">
+<div class="icon">⚙️</div>
+<div class="icon-title">Projects</div>
+<div class="icon-desc">
+Systems and dashboards built
 </div>
 </div>
+</a>
 """, unsafe_allow_html=True)
 
-
 st.markdown("<br><br>")
-
 st.caption("© Jason Sim")
