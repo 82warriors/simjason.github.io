@@ -79,7 +79,7 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     st.markdown("""
 <div class="nav-box">
-<div class="nav-title">👤 About</div>
+<div class="nav-title">👤 About Me</div>
 <div class="nav-desc">
 Who I am and what I do
 </div>
