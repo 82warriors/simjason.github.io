@@ -36,47 +36,7 @@ with col3:
 
 st.divider()
 
-# PROJECT CARDS
-st.header("Featured Projects")
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-### ⚙️ Equipment Booking System
-Automated equipment booking workflow.
-
-**Impact**
-- Reduced manual coordination
-- Faster approvals
-""")
-
-with col2:
-    st.markdown("""
-### 📦 Inventory Dashboard
-Digital asset tracking system.
-
-**Impact**
-- Centralised inventory tracking
-- Real-time analytics
-""")
-
-with col3:
-    st.markdown("""
-### 🌐 ICT Staff Portal
-Centralised portal for ICT services.
-
-**Impact**
-- Simplified staff requests
-- Improved access to resources
-""")
-
-st.divider()
-
-st.markdown("© Jason Sim")
-
-st.divider()
-
+# FEATURED PROJECTS
 st.header("Featured Projects")
 
 col1, col2, col3 = st.columns(3)
@@ -89,7 +49,7 @@ Automated equipment booking workflow
 with approval notifications.
 
 **Impact**
-- Reduced manual coordination
+- Reduced manual coordination  
 - Faster approvals
 """)
 
@@ -101,7 +61,7 @@ Digital asset tracking system with
 analytics dashboards.
 
 **Impact**
-- Centralised equipment tracking
+- Centralised equipment tracking  
 - Real-time reporting
 """)
 
@@ -113,12 +73,13 @@ One-stop portal for ICT services
 and staff requests.
 
 **Impact**
-- Simplified ICT processes
+- Simplified ICT processes  
 - Improved staff access
 """)
 
 st.divider()
 
+# TECH PORTFOLIO METRICS
 st.header("Tech Portfolio")
 
 col1, col2, col3 = st.columns(3)
@@ -132,9 +93,9 @@ with col2:
 with col3:
     st.metric("ICT Solutions", "20+")
 
-
 st.divider()
 
+# TECHNOLOGY STACK
 st.header("Technology Stack")
 
 st.write("""
@@ -145,9 +106,12 @@ Excel Systems • ICT Infrastructure
 
 st.divider()
 
+# FOOTER
 st.markdown("""
 ### Connect
 
 GitHub: https://github.com/simjason  
 Website: https://simjason.com
 """)
+
+st.markdown("© Jason Sim")
