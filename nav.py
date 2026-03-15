@@ -2,21 +2,32 @@ import streamlit as st
 
 def navbar():
 
-    # hide sidebar
     st.markdown("""
     <style>
+
     [data-testid="stSidebar"] {display:none;}
 
-    .nav-container {
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:10px 0px 30px 0px;
+    .logo{
+        font-size:26px;
+        font-weight:700;
+        background: linear-gradient(90deg,#6366F1,#4CC9F0);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
     }
 
-    .logo {
-        font-size:22px;
-        font-weight:700;
+    .nav{
+        padding-bottom:20px;
+        border-bottom:1px solid #eee;
+    }
+
+    .menu a{
+        text-decoration:none;
+        font-weight:500;
+        color:#111827;
+    }
+
+    .menu a:hover{
+        color:#6366F1;
     }
 
     </style>
@@ -28,7 +39,8 @@ def navbar():
         st.markdown('<div class="logo">Jason Sim</div>', unsafe_allow_html=True)
 
     with col2:
-        c1, c2, c3, c4 = st.columns(4)
+
+        c1,c2,c3,c4 = st.columns(4)
 
         with c1:
             st.page_link("Home.py", label="Home")
