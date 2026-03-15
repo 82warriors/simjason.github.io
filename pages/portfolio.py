@@ -1,29 +1,32 @@
 import streamlit as st
 
-st.title("Career Timeline")
+st.title("Digital Portfolio")
 
-st.markdown("""
-### 2018 – Present  
-**Infocomm Technology Manager**  
-Ministry of Education
+st.header("Website Management & Data Systems")
 
-- Lead ICT initiatives
-- Develop automation systems
-- Build analytics dashboards
+st.write("""
+Managed and updated school website content using
+Swiit CMS and Isomer CMS platforms.
 
----
+Responsibilities included:
 
-### 2014 – 2018  
-**Digital Trainer & Executive**  
-Eduvantage Pte Ltd
+• Managing website structure and navigation  
+• Publishing announcements and digital resources  
+• Maintaining accessibility and usability
+""")
 
-- Staff training
-- Website management
-- Digital outreach
+st.header("Digital Marketing Analytics")
 
----
+st.write("""
+Analysed Meta Insights including:
 
-### Early Career  
-Engineering and technology background
-supporting digital transformation initiatives.
+• Reach  
+• Impressions  
+• Engagement metrics  
+• Audience behaviour
+""")
+
+st.write("""
+Insights were used to optimise digital visibility
+and audience engagement.
 """)
