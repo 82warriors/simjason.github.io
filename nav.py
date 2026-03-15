@@ -7,12 +7,13 @@ def navbar():
 
     [data-testid="stSidebar"] {display:none}
 
-    .nav{
+    .nav-container{
         display:flex;
         justify-content:space-between;
         align-items:center;
         padding:20px 40px;
         border-bottom:1px solid #eee;
+        font-family: sans-serif;
     }
 
     .logo{
@@ -22,23 +23,24 @@ def navbar():
 
     .menu{
         display:flex;
-        gap:20px;
-    }
-
-    .menu button{
-        background:none;
-        border:none;
+        gap:40px;
         font-size:16px;
-        font-weight:500;
-        cursor:pointer;
     }
 
-    .menu button:hover{
+    .menu-item{
+        cursor:pointer;
+        color:#111;
+        text-decoration:none;
+    }
+
+    .menu-item:hover{
         color:#6366f1;
     }
 
     </style>
     """, unsafe_allow_html=True)
+
+    st.markdown('<div class="nav-container">', unsafe_allow_html=True)
 
     col1, col2 = st.columns([6,4])
 
@@ -46,6 +48,7 @@ def navbar():
         st.markdown('<div class="logo">Jason Sim</div>', unsafe_allow_html=True)
 
     with col2:
+
         colA, colB, colC, colD = st.columns(4)
 
         with colA:
@@ -63,3 +66,5 @@ def navbar():
         with colD:
             if st.button("Projects"):
                 st.switch_page("pages/Projects.py")
+
+    st.markdown('</div>', unsafe_allow_html=True)
