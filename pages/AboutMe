@@ -1,20 +1,21 @@
 import streamlit as st
 
-st.title("About Me")
+st.title("Who Am I")
 
 st.write("""
-I work at the intersection of education and technology,
-building systems that streamline processes and improve efficiency.
+I am a technology advocate focused on automation systems,
+data analytics, and digital transformation in education.
 
-My focus is on developing practical solutions that help organisations
-reduce manual work and make better decisions using data.
+My work centres on building practical digital solutions
+that streamline operations and empower organisations
+to make better decisions using data.
 """)
 
-st.header("Areas of Focus")
+st.header("Key Expertise")
 
 st.write("""
-• Automation of workflows  
-• Data dashboards and analytics  
-• ICT infrastructure and systems  
-• Digital transformation
+• Automation Systems  
+• ICT Infrastructure  
+• Data Dashboards  
+• Digital Platforms
 """)
