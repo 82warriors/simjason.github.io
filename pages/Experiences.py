@@ -1,37 +1,28 @@
 import streamlit as st
 
+st.set_page_config(page_title="Experiences", page_icon="💼", layout="wide")
+
 st.title("Professional Experience")
 
-st.header("Infocomm Technology Manager | Infocomm Technology Associate")
-st.subheader("Ministry of Education (Schools) | 2018 – Present")
+st.subheader("Infocomm Technology Manager / Associate")
+st.write("Ministry of Education Schools | 2018 – Present")
 
 st.write("""
-• Lead ICT and digital initiatives supporting teaching and learning technologies.
-
-• Develop automation solutions using **Google Apps Script** to streamline ICT workflows.
-
-• Analyse operational data and build **data dashboards for reporting and decision making**.
-
-• Manage ICT infrastructure, digital platforms and device deployments.
-
-• Conduct training programmes to improve **staff digital competency and technology adoption**.
-
-• Maintain and manage **school website platforms** and support Cyber Wellness education.
+• Lead ICT and digital initiatives supporting teaching and learning technologies  
+• Develop automation systems using Google Apps Script  
+• Build dashboards to analyse operational data and improve reporting  
+• Manage ICT infrastructure and device deployments  
+• Conduct training to improve staff digital competency  
+• Maintain school website and support cyber wellness education
 """)
 
-st.divider()
-
-st.header("Digital Trainer | Executive | Recruitment Specialist")
-st.subheader("Eduvantage Pte Ltd | 2014 – 2018")
+st.subheader("Digital Trainer / Executive / Recruitment Specialist")
+st.write("Eduvantage Pte Ltd | 2014 – 2018")
 
 st.write("""
-• Managed recruitment processes including candidate sourcing and screening.
-
-• Published job advertisements across multiple **digital platforms and media channels**.
-
-• Maintained and updated the **company website** to support digital outreach.
-
-• Provided staff training on operational workflows and digital tools.
-
-• Supported schools in **technology planning and digital programmes**.
+• Managed recruitment processes and candidate screening  
+• Published recruitment campaigns across digital platforms  
+• Maintained and updated company website  
+• Delivered training programmes for staff  
+• Supported schools in technology planning and programmes
 """)
