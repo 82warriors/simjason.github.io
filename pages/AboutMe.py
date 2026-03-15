@@ -1,38 +1,26 @@
 import streamlit as st
+from nav import navbar
 
-st.set_page_config(page_title="About Me", page_icon="👤", layout="wide")
+st.set_page_config(layout="wide")
+
+navbar()
 
 st.title("About Me")
 
 st.write("""
-I am an Infocomm Technology professional passionate about building
-automation systems, analytics dashboards and digital platforms that
-improve operational efficiency.
+I am an Infocomm Technology professional focused on building
+automation systems, analytics dashboards and digital platforms.
 
-My work focuses on using technology to simplify workflows,
-support decision making and transform data into meaningful insights.
+My work centres on simplifying workflows, improving operational
+efficiency and transforming data into insights.
 """)
 
-st.subheader("What I Do")
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("### ⚙️ Automation Systems")
-    st.write("Design workflow automation to streamline operations.")
-
-with col2:
-    st.markdown("### 📊 Analytics Dashboards")
-    st.write("Develop dashboards that support data-driven decisions.")
-
-with col3:
-    st.markdown("### 💻 ICT Digital Platforms")
-    st.write("Build systems that improve digital processes.")
-
-st.subheader("Technology")
+st.markdown("### Technology")
 
 st.write("""
-Python • Streamlit • Google Apps Script  
-Data Analytics • Workflow Automation  
-Excel Systems • ICT Infrastructure
+Python  
+Streamlit  
+Google Apps Script  
+Data Analytics  
+ICT Infrastructure
 """)
