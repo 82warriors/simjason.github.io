@@ -13,7 +13,6 @@ def navbar():
         align-items:center;
         padding:20px 60px;
         border-bottom:1px solid #eee;
-        font-family:sans-serif;
     }
 
     .logo{
@@ -24,7 +23,6 @@ def navbar():
     .menu{
         display:flex;
         gap:40px;
-        font-size:16px;
     }
 
     .menu a{
@@ -33,19 +31,11 @@ def navbar():
         font-weight:500;
     }
 
-    .menu a:hover{
-        color:#6366f1;
-    }
-
     </style>
-    """, unsafe_allow_html=True)
 
-    st.markdown("""
     <div class="nav">
 
-        <div class="logo">
-        Jason Sim
-        </div>
+        <div class="logo">Jason Sim</div>
 
         <div class="menu">
             <a href="/">Home</a>
