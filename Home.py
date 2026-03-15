@@ -19,16 +19,16 @@ st.markdown("### Explore")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.page_link("AboutMe.py", label="About")
+    st.page_link("pages/AboutMe.py", label="About")
 
 with col2:
-    st.page_link("projects.py", label="Projects")
+    st.page_link("pages/projects.py", label="Projects")
 
 with col3:
-    st.page_link("portfolio.py", label="Portfolio")
+    st.page_link("pages/portfolio.py", label="Portfolio")
 
 with col4:
-    st.page_link("dashboard.py", label="Dashboard")
+    st.page_link("pages/dashboard.py", label="Dashboard")
 
 st.markdown("---")
 
