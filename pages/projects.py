@@ -2,31 +2,29 @@ import streamlit as st
 
 st.title("Projects")
 
-st.subheader("ICT Equipment Booking System")
+st.subheader("ICT Booking Automation")
+
+st.image("images/booking_system.png")
 
 st.write("""
-**Problem**
-Manual equipment booking caused scheduling conflicts.
-
-**Solution**
-Developed an automated booking system using Google Forms
-and Apps Script with approval workflows.
-
-**Impact**
-Reduced admin workload and improved booking transparency.
+Automated equipment booking system built using
+Google Forms, Sheets and Apps Script.
 """)
 
-st.divider()
+st.subheader("ICT Inventory Microsite")
 
-st.subheader("ICT Inventory System")
+st.image("images/inventory_dashboard.png")
 
 st.write("""
-**Problem**
-Tracking ICT equipment across locations was inefficient.
+Web-based inventory platform centralising ICT asset
+information and operational reporting.
+""")
 
-**Solution**
-Built an inventory dashboard with analytics and reporting.
+st.subheader("Operational Dashboards")
 
-**Impact**
-Improved asset visibility and equipment management.
+st.image("images/inventory_dashboard.png")
+
+st.write("""
+Built dashboards analysing ICT resource usage
+to generate operational insights.
 """)
