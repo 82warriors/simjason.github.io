@@ -1,22 +1,21 @@
 import streamlit as st
+from nav import navbar
 
-st.set_page_config(page_title="Projects", page_icon="⚙️", layout="wide")
+st.set_page_config(layout="wide")
+
+navbar()
 
 st.title("Projects")
 
 st.subheader("ICT Booking Automation")
 
 st.write("""
-Developed an automated equipment booking system using
-Google Forms, Google Sheets and Apps Script.
-""")
+Automated equipment booking workflow using
+Google Forms, Sheets and Apps Script.
 
-st.write("**Impact**")
-
-st.write("""
-• Automated equipment booking approvals  
-• Reduced manual coordination  
-• Enabled real-time tracking of ICT resources
+Impact
+• Reduced manual coordination
+• Enabled real-time resource tracking
 """)
 
 st.divider()
@@ -24,16 +23,11 @@ st.divider()
 st.subheader("ICT Inventory Dashboard")
 
 st.write("""
-Built an inventory tracking system with analytics dashboards
-to monitor ICT assets and equipment usage.
-""")
+Dashboard analysing ICT asset usage and inventory data.
 
-st.write("**Impact**")
-
-st.write("""
-• Centralised asset tracking  
-• Improved visibility of ICT resources  
-• Enabled data-driven decision making
+Impact
+• Centralised equipment tracking
+• Improved reporting visibility
 """)
 
 st.divider()
@@ -41,14 +35,9 @@ st.divider()
 st.subheader("Late Coming Monitoring System")
 
 st.write("""
-Developed an Excel-based analytics system to analyse
-student attendance trends.
-""")
+Excel-based analytics system analysing attendance trends.
 
-st.write("**Impact**")
-
-st.write("""
-• Automated attendance reports  
-• Identified attendance patterns  
-• Supported school administration decisions
+Impact
+• Automated reports
+• Identified behavioural patterns
 """)
