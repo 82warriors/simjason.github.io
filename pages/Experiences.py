@@ -7,24 +7,12 @@ navbar()
 
 st.title("Experiences")
 
-st.subheader("Infocomm Technology Manager / Associate")
+st.subheader("Infocomm Technology Manager")
+st.write("Ministry of Education — 2018 to Present")
 
 st.write("""
-Ministry of Education — 2018 to Present
-
-• Lead ICT and digital initiatives supporting teaching and learning  
-• Develop automation solutions using Google Apps Script  
-• Build dashboards for operational reporting and analysis  
-• Manage ICT infrastructure and device deployments
-""")
-
-st.subheader("Digital Trainer / Executive")
-
-st.write("""
-Eduvantage Pte Ltd — 2014 to 2018
-
-• Managed recruitment processes  
-• Maintained company website  
-• Delivered training programmes  
-• Supported schools in technology planning
+• Led ICT digital initiatives  
+• Built automation workflows  
+• Developed operational dashboards  
+• Managed ICT infrastructure
 """)
