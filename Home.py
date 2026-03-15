@@ -3,12 +3,16 @@ import streamlit as st
 st.set_page_config(
     page_title="Jason Sim",
     page_icon="🚀",
-    layout="centered"
+    layout="wide"
 )
 
-st.title("Jason Sim")
-st.write("Technology Advocate")
-st.write("Automation Systems | Website Analytics | Data Dashboards")
+# HERO SECTION
+st.markdown("""
+<h1 style='text-align:center;font-size:64px;'>Jason Sim</h1>
+<p style='text-align:center;font-size:22px;color:gray;'>
+Technology Advocate • Website Analytics • Automation Systems
+</p>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -16,89 +20,60 @@ st.markdown("---")
 st.markdown("""
 <style>
 
-.card {
-    padding:22px;
-    border-radius:12px;
+div[data-testid="stPageLink"] {
+    border-radius:14px;
     border:1px solid #e6e6e6;
-    text-align:center;
-    background:linear-gradient(135deg,#f8f9fa,#ffffff);
+    padding:30px;
+    background: linear-gradient(135deg,#f8f9fa,#ffffff);
     transition:0.2s;
+    text-align:center;
 }
 
-.card:hover {
-    transform:translateY(-4px);
-    box-shadow:0px 8px 20px rgba(0,0,0,0.15);
+div[data-testid="stPageLink"]:hover {
+    transform:translateY(-6px);
+    box-shadow:0px 10px 25px rgba(0,0,0,0.15);
 }
 
-.card a {
+div[data-testid="stPageLink"] a {
+    font-size:22px;
+    font-weight:600;
     text-decoration:none;
-    color:black;
-    display:block;
-}
-
-.card h3 {
-    margin-bottom:5px;
-}
-
-.card p {
-    font-size:14px;
-    color:#666;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-
-col1, col2, col3, col4 = st.columns(4)
-
+# GRID CARDS
+col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
 
 with col1:
-    st.markdown("""
-<a href="AboutMe">
-<div class="card">
-<h3>👤 About</h3>
-<p>Who I am and what I do.</p>
-</div>
-</a>
-""", unsafe_allow_html=True)
-    st.page_link("pages/AboutMe.py", label="")
-
+    st.page_link(
+        "pages/AboutMe.py",
+        label="👤 About",
+        help="Learn about my background and experience"
+    )
 
 with col2:
-    st.markdown("""
-<a href="Projects">
-<div class="card">
-<h3>⚙️ Projects</h3>
-<p>Systems and platforms I built.</p>
-</div>
-</a>
-""", unsafe_allow_html=True)
-    st.page_link("pages/projects.py", label="")
-
+    st.page_link(
+        "pages/Projects.py",
+        label="⚙️ Projects",
+        help="Systems, automation tools and digital platforms"
+    )
 
 with col3:
-    st.markdown("""
-<a href="Portfolio">
-<div class="card">
-<h3>📊 Portfolio</h3>
-<p>Digital platforms and analytics work.</p>
-</div>
-</a>
-""", unsafe_allow_html=True)
-    st.page_link("pages/portfolio.py", label="")
-
+    st.page_link(
+        "pages/Experiences.py",
+        label="💼 Experience",
+        help="Professional experience and achievements"
+    )
 
 with col4:
-    st.markdown("""
-<a href="Dashboard">
-<div class="card">
-<h3>📈 Dashboard</h3>
-<p>Interactive analytics dashboard.</p>
-</div>
-</a>
-""", unsafe_allow_html=True)
-    st.page_link("pages/dashboard.py", label="")
-
+    st.page_link(
+        "pages/Dashboard.py",
+        label="📊 Dashboard",
+        help="Interactive analytics and data visualisations"
+    )
 
 st.markdown("---")
 st.caption("© Jason Sim")
