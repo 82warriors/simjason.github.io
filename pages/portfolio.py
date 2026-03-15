@@ -1,32 +1,37 @@
 import streamlit as st
 
-st.title("Digital Portfolio")
+st.title("Professional Experience")
 
-st.header("Website Management & Data Systems")
+st.header("Infocomm Technology Manager | Infocomm Technology Associate")
+st.subheader("Ministry of Education (Schools) | 2018 – Present")
 
 st.write("""
-Managed and updated school website content using
-Swiit CMS and Isomer CMS platforms.
+• Lead ICT and digital initiatives supporting teaching and learning technologies.
 
-Responsibilities included:
+• Develop automation solutions using **Google Apps Script** to streamline ICT workflows.
 
-• Managing website structure and navigation  
-• Publishing announcements and digital resources  
-• Maintaining accessibility and usability
+• Analyse operational data and build **data dashboards for reporting and decision making**.
+
+• Manage ICT infrastructure, digital platforms and device deployments.
+
+• Conduct training programmes to improve **staff digital competency and technology adoption**.
+
+• Maintain and manage **school website platforms** and support Cyber Wellness education.
 """)
 
-st.header("Digital Marketing Analytics")
+st.divider()
+
+st.header("Digital Trainer | Executive | Recruitment Specialist")
+st.subheader("Eduvantage Pte Ltd | 2014 – 2018")
 
 st.write("""
-Analysed Meta Insights including:
+• Managed recruitment processes including candidate sourcing and screening.
 
-• Reach  
-• Impressions  
-• Engagement metrics  
-• Audience behaviour
-""")
+• Published job advertisements across multiple **digital platforms and media channels**.
 
-st.write("""
-Insights were used to optimise digital visibility
-and audience engagement.
+• Maintained and updated the **company website** to support digital outreach.
+
+• Provided staff training on operational workflows and digital tools.
+
+• Supported schools in **technology planning and digital programmes**.
 """)
