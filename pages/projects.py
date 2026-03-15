@@ -4,27 +4,36 @@ st.title("Projects")
 
 st.subheader("ICT Booking Automation")
 
-st.image("images/booking.png")
-
 st.write("""
-Automated equipment booking system built using
-Google Forms, Sheets and Apps Script.
+Developed automation platform using Google Forms,
+Sheets and Apps Script.
+
+Impact:
+
+• Automated equipment booking approvals  
+• Enabled real-time tracking of ICT resources
 """)
 
 st.subheader("ICT Inventory Microsite")
 
-st.image("images/inventory_1.png")
-
 st.write("""
-Web-based inventory platform centralising ICT asset
-information and operational reporting.
+Built ICT inventory system using Google Sites
+and GitHub Pages.
+
+Impact:
+
+• Centralised asset information  
+• Improved accessibility of ICT records
 """)
 
-st.subheader("Operational Dashboards")
-
-st.image("images/inventory_2.png")
+st.subheader("Late Coming Monitoring System")
 
 st.write("""
-Built dashboards analysing ICT resource usage
-to generate operational insights.
+Developed Excel-based monitoring system
+to analyse attendance trends.
+
+Impact:
+
+• Automated reports  
+• Provided trend insights for school administration
 """)
