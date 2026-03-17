@@ -30,7 +30,7 @@ st.markdown("""
 .exp-card{
     background:#ffffff;
     border-radius:14px;
-    padding:20px;
+    padding:22px;
     margin-bottom:25px;
     border:1px solid #e5e7eb;
     transition:0.3s;
@@ -63,6 +63,12 @@ st.markdown("""
     margin-left:10px;
     font-size:15px;
     color:#374151;
+    margin-bottom:6px;
+}
+
+.icon{
+    font-size:22px;
+    margin-right:8px;
 }
 
 .center{
@@ -87,29 +93,41 @@ st.markdown('<div class="timeline">', unsafe_allow_html=True)
 # EXPERIENCE 1
 st.markdown("""
 <div class="exp-card">
-<div class="role">Infocomm Technology Manager / Associate</div>
+
+<div class="role">
+<span class="icon">🚀</span>
+Infocomm Technology Manager / Associate
+</div>
+
 <div class="company">Ministry of Education (Schools)</div>
 <div class="date">2018 – Present</div>
 
-<div class="point">• Lead ICT and digital initiatives supporting teaching and learning technologies</div>
-<div class="point">• Develop automation solutions using Google Apps Script to streamline workflows</div>
-<div class="point">• Build analytics dashboards for operational reporting and decision making</div>
-<div class="point">• Manage ICT infrastructure, assets and system implementation</div>
-<div class="point">• Develop web-based systems and microsites for staff access and operations</div>
+<div class="point">✅ Spearheaded ICT and digital initiatives supporting teaching and learning environments</div>
+<div class="point">⚙️ Automated workflows using Google Apps Script, reducing manual processes significantly</div>
+<div class="point">📊 Developed analytics dashboards to support data-driven decision making</div>
+<div class="point">🖥️ Managed ICT infrastructure, assets and deployment across school operations</div>
+<div class="point">🌐 Built web-based systems and microsites to centralise ICT services and improve accessibility</div>
+
 </div>
 """, unsafe_allow_html=True)
 
-# EXPERIENCE 2 (you can edit/add more)
+# EXPERIENCE 2
 st.markdown("""
 <div class="exp-card">
-<div class="role">Recruitment & Operations Support</div>
+
+<div class="role">
+<span class="icon">📌</span>
+Recruitment & Operations Support
+</div>
+
 <div class="company">Previous Organisation</div>
 <div class="date">Earlier Experience</div>
 
-<div class="point">• Managed recruitment processes including sourcing and screening candidates</div>
-<div class="point">• Published job advertisements across multiple platforms</div>
-<div class="point">• Maintained company website and digital content</div>
-<div class="point">• Provided staff training on systems and workflows</div>
+<div class="point">👥 Managed end-to-end recruitment processes including sourcing, screening and onboarding</div>
+<div class="point">📢 Published job advertisements across multiple platforms to attract talent</div>
+<div class="point">🌐 Maintained and updated company website to support digital outreach</div>
+<div class="point">🎓 Trained staff on systems, workflows and operational tools</div>
+
 </div>
 """, unsafe_allow_html=True)
 
@@ -120,6 +138,6 @@ st.divider()
 
 st.markdown("""
 <div class="center">
-<p>Continuously building technology solutions that create real impact 🚀</p>
+<p>Driven by building systems that create efficiency and impact 🚀</p>
 </div>
 """, unsafe_allow_html=True)
