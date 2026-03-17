@@ -5,51 +5,53 @@ def navbar():
     st.markdown("""
     <style>
 
-    [data-testid="stSidebar"] {display:none;}
+    .nav-container {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 0;
+        margin-bottom:20px;
+    }
 
-    .logo{
-        font-size:26px;
+    .logo {
+        font-size:20px;
         font-weight:700;
-        background: linear-gradient(90deg,#6366F1,#4CC9F0);
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:transparent;
+        color:#6366F1;
     }
 
-    .nav{
-        padding-bottom:20px;
-        border-bottom:1px solid #eee;
-    }
-
-    .menu a{
+    .nav-links a {
+        margin-left:25px;
         text-decoration:none;
         font-weight:500;
-        color:#111827;
+        color:#374151;
+        transition:0.2s;
     }
 
-    .menu a:hover{
+    .nav-links a:hover {
         color:#6366F1;
+    }
+
+    .active {
+        color:#6366F1 !important;
+        font-weight:600;
     }
 
     </style>
     """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns([6,4])
+    # Get current page
+    page = st.session_state.get("page", "Home")
 
-    with col1:
-        st.markdown('<div class="logo">Jason Sim</div>', unsafe_allow_html=True)
+    # Navbar HTML
+    st.markdown(f"""
+    <div class="nav-container">
+        <div class="logo">Jason Sim</div>
 
-    with col2:
-
-        c1,c2,c3,c4 = st.columns(4)
-
-        with c1:
-            st.page_link("Home.py", label="Home")
-
-        with c2:
-            st.page_link("pages/AboutMe.py", label="About")
-
-        with c3:
-            st.page_link("pages/Experiences.py", label="Experiences")
-
-        with c4:
-            st.page_link("pages/Projects.py", label="Projects")
+        <div class="nav-links">
+            <a href="/" class="{ 'active' if page=='Home' else '' }">Home</a>
+            <a href="/AboutMe" class="{ 'active' if page=='About' else '' }">About</a>
+            <a href="/Projects" class="{ 'active' if page=='Projects' else '' }">Projects</a>
+            <a href="/Experiences" class="{ 'active' if page=='Experience' else '' }">Experience</a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
