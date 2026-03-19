@@ -35,9 +35,9 @@ def navbar():
         <div class="nav-left">🚀 Jason Sim</div>
         <div class="nav-right">
             <a href="/">Home</a>
-            <a href="/About">About</a>
-            <a href="/Experience">Experience</a>
-            <a href="/Projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="/experience">Experience</a>
+            <a href="/projects">Projects</a>
         </div>
     </div>
     """, unsafe_allow_html=True)
