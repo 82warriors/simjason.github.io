@@ -1,73 +1,128 @@
 import streamlit as st
-import os
-from nav import navbar
+import pandas as pd
 
-st.set_page_config(page_title="Jason Sim", page_icon="🚀", layout="wide")
+# ==================================================
+# PAGE CONFIG
+# ==================================================
+st.set_page_config(page_title="FVPS Dashboard", layout="wide")
 
-navbar()
+st.title("📊 FVPS Dashboard")
 
-# ---------- HERO ----------
-col1, col2 = st.columns([2,1])
+# ==================================================
+# LOAD DATA
+# ==================================================
+@st.cache_data(ttl=120)
+def load_data():
+    url = "https://docs.google.com/spreadsheets/d/1lmCotLUgTLJBKska2y7od2LTPT_qooIFS0_zyVnRI0A/export?format=csv"
 
-with col1:
-    st.title("Jason Sim")
-    st.subheader("ICT Manager • Automation Systems • Digital Solutions")
+    raw = pd.read_csv(url, header=None, dtype=str)
 
-    st.write("""
-    I design and build automation systems, dashboards, and digital platforms 
-    that streamline operations and improve efficiency in education.
-    """)
+    header_row = None
 
-    colA, colB = st.columns(2)
-    with colA:
-        st.page_link("pages/projects.py", label="🚀 View Projects")
-    with colB:
-        st.page_link("pages/experience.py", label="💼 Experience")
+    for i in range(len(raw)):
+        row = raw.iloc[i].astype(str).str.upper()
 
-with col2:
-    st.image(os.path.join("images", "jason.png"), use_container_width=True)
+        if "BRANDMODEL" in row.values or "BRAND MODEL" in row.values:
+            header_row = i
+            break
 
-st.divider()
+    if header_row is None:
+        st.error("❌ Cannot detect header row")
+        st.stop()
 
-# ---------- ABOUT PREVIEW ----------
-st.header("About Me")
+    df = pd.read_csv(url, header=header_row)
 
-st.write("""
-ICT professional specialising in automation, system development, and data-driven solutions.  
-Focused on improving workflows and reducing manual processes in education environments.
-""")
+    df.columns = df.columns.astype(str).str.strip()
+    df = df.loc[:, ~df.columns.str.contains("^Unnamed", na=False)]
 
-st.page_link("pages/about.py", label="Read more →")
+    # Normalize
+    df = df.rename(columns={
+        "Brand Model": "BrandModel",
+        "Equipment Type": "EquipmentType",
+        "End Date": "EndDate",
+        "Start Date": "StartDate"
+    })
 
-st.divider()
+    # Clean
+    if "BrandModel" in df.columns:
+        df["BrandModel"] = df["BrandModel"].astype(str).str.upper().str.strip()
 
-# ---------- WHAT I DO ----------
-st.header("What I Do")
+    if "EquipmentType" in df.columns:
+        df["EquipmentType"] = df["EquipmentType"].astype(str).str.title().str.strip()
 
-col1, col2, col3 = st.columns(3)
+    for col in ["EndDate", "StartDate", "Last Updated"]:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors="coerce")
 
-col1.metric("⚙️ Automation", "Workflows & Systems")
-col2.metric("📊 Data", "Dashboards & Reporting")
-col3.metric("💻 ICT", "Infrastructure & Platforms")
+    df = df.dropna(how="all")
 
-st.divider()
+    return df
 
-# ---------- PROJECT PREVIEW ----------
-st.header("Featured Projects")
 
-col1, col2, col3 = st.columns(3)
+df = load_data()
 
-with col1:
-    st.info("Inventory Management System")
+# ==================================================
+# REFRESH
+# ==================================================
+if st.button("🔄 Refresh Dashboard"):
+    st.cache_data.clear()
+    st.rerun()
 
-with col2:
-    st.info("Automation Workflow System")
+# ==================================================
+# KPI
+# ==================================================
+today = pd.Timestamp.today()
 
-with col3:
-    st.info("Data Dashboard")
+expired = df[df["EndDate"] < today] if "EndDate" in df.columns else pd.DataFrame()
+expiring = df[
+    (df["EndDate"] >= today) &
+    (df["EndDate"] <= today + pd.Timedelta(days=30))
+] if "EndDate" in df.columns else pd.DataFrame()
 
-st.page_link("pages/projects.py", label="View All Projects →")
+st.markdown("## 📊 Overview")
 
-st.divider()
+c1, c2, c3, c4 = st.columns(4)
 
-st.caption("© 2026 Jason Sim • ICT & Automation Portfolio")
+c1.metric("Total Devices", len(df))
+c2.metric("Expired", len(expired))
+c3.metric("Expiring (30 Days)", len(expiring))
+c4.metric("Unique Models", df["BrandModel"].nunique() if "BrandModel" in df.columns else 0)
+
+# ==================================================
+# ALERT
+# ==================================================
+if len(expiring) > 0:
+    st.warning(f"⚠️ {len(expiring)} devices expiring within 30 days")
+
+# ==================================================
+# CHARTS
+# ==================================================
+st.markdown("## 📈 Insights")
+
+colA, colB = st.columns(2)
+
+with colA:
+    st.markdown("### Equipment Distribution")
+    if "EquipmentType" in df.columns:
+        st.bar_chart(df["EquipmentType"].value_counts())
+
+with colB:
+    st.markdown("### Expiry Timeline")
+    if "EndDate" in df.columns:
+        chart = (
+            df.dropna(subset=["EndDate"])
+            .groupby(df["EndDate"].dt.to_period("M"))
+            .size()
+            .sort_index()
+        )
+        chart.index = chart.index.astype(str)
+        st.line_chart(chart)
+
+# ==================================================
+# TOP MODELS
+# ==================================================
+st.markdown("## 🏆 Top Equipment Models")
+
+if "BrandModel" in df.columns:
+    top = df["BrandModel"].value_counts().head(10)
+    st.dataframe(top, use_container_width=True)
