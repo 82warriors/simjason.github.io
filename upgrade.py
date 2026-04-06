@@ -11,9 +11,8 @@ st.title("⬆️ Upgrade Status Dashboard")
 # ==================================================
 # CONFIG
 # ==================================================
-BASE_URL = "https://docs.google.com/spreadsheets/d/1x4EP6dO3FpkFRMBXqHDku0pl4vtHrWnE1S3J-e86vt0/export?format=csv&gid="
+BASE_URL = "https://docs.google.com/spreadsheets/d/1x4EP6dO3FpkFRMBXqHDku0pl4vtHrWnE1S3J-e86vt0/export?format=csv&gid=1946114847"
 
-# 🔥 TARGET MODELS
 TARGET_MODELS = [
     "ACER VX2670G DESKTOP",
     "LENOVO K14 GEN2",
@@ -21,13 +20,11 @@ TARGET_MODELS = [
 ]
 
 # ==================================================
-# LOAD DATA (AUTO DETECT HEADER)
+# LOAD DATA (BULLETPROOF)
 # ==================================================
 @st.cache_data(ttl=120)
-def load_data(gid):
-    url = BASE_URL + gid
-
-    raw = pd.read_csv(url, header=None, dtype=str)
+def load_data():
+    raw = pd.read_csv(BASE_URL, header=None, dtype=str)
 
     header_row = None
 
@@ -39,60 +36,54 @@ def load_data(gid):
             break
 
     if header_row is None:
-        st.error("❌ Header not found")
+        st.error("❌ Cannot detect header row")
         st.stop()
 
-    df = pd.read_csv(url, header=header_row)
+    df = pd.read_csv(BASE_URL, header=header_row)
 
     df.columns = df.columns.astype(str).str.strip()
     df = df.loc[:, ~df.columns.str.contains("^Unnamed", na=False)]
 
     return df
 
-# ==================================================
-# 🔥 USE LATEST SHEET (MANUAL GID FOR NOW)
-# ==================================================
-# 👉 Replace if you want auto-detect across sheets
-LATEST_GID = "1946114847"
 
-df = load_data(LATEST_GID)
+df = load_data()
 
 # ==================================================
 # CLEAN DATA
 # ==================================================
-# Normalize BrandModel
 if "BrandModel" in df.columns:
     df["BrandModel"] = df["BrandModel"].astype(str).str.upper().str.strip()
 
-# Normalize Status column
-STATUS_COL = None
-
+# Detect status column
+status_col = None
 for col in df.columns:
     if "STATUS" in col.upper():
-        STATUS_COL = col
+        status_col = col
         break
 
-if STATUS_COL is None:
+if status_col is None:
     st.error("❌ No Status column found")
-    st.write("Detected columns:", df.columns.tolist())
+    st.write(df.columns.tolist())
     st.stop()
 
 # ==================================================
 # FILTER TARGET MODELS
 # ==================================================
-df_filtered = df[df["BrandModel"].isin(TARGET_MODELS)]
+df = df[df["BrandModel"].isin(TARGET_MODELS)]
+
+# Normalize status values
+df[status_col] = df[status_col].astype(str).str.strip().str.title()
 
 # ==================================================
-# COMPUTE STATUS
+# SUMMARY
 # ==================================================
 summary = (
-    df_filtered
-    .groupby(["BrandModel", STATUS_COL])
+    df.groupby(["BrandModel", status_col])
     .size()
     .unstack(fill_value=0)
 )
 
-# Ensure columns exist
 for col in ["Completed", "Not Completed"]:
     if col not in summary.columns:
         summary[col] = 0
@@ -104,13 +95,10 @@ summary = summary.reset_index()
 # ==================================================
 st.markdown("## 📊 Overview")
 
-total_completed = summary["Completed"].sum()
-total_not_completed = summary["Not Completed"].sum()
-
 c1, c2 = st.columns(2)
 
-c1.metric("✅ Completed", int(total_completed))
-c2.metric("❌ Not Completed", int(total_not_completed))
+c1.metric("✅ Completed", int(summary["Completed"].sum()))
+c2.metric("❌ Not Completed", int(summary["Not Completed"].sum()))
 
 # ==================================================
 # TABLE
@@ -120,16 +108,15 @@ st.markdown("## 📋 Upgrade Summary")
 st.dataframe(summary, use_container_width=True, hide_index=True)
 
 # ==================================================
-# BAR CHART
+# CHART
 # ==================================================
 st.markdown("## 📈 Upgrade Progress")
 
 chart_df = summary.set_index("BrandModel")[["Completed", "Not Completed"]]
-
 st.bar_chart(chart_df)
 
 # ==================================================
 # RAW DATA
 # ==================================================
-with st.expander("🔍 View Raw Data"):
-    st.dataframe(df_filtered, use_container_width=True)
+with st.expander("🔍 Raw Data"):
+    st.dataframe(df, use_container_width=True)
